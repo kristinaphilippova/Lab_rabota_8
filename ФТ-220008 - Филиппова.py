@@ -12,7 +12,7 @@ def taxi_assignment(N, distances, tariffs):
     assignment = [sorted_taxis[i] + 1 for i in range(N)]
 
     # Считаем суммарную стоимость поездок
-    total_cost = sum(distances[i] * tariffs[assignment[i] - 1] for i in range(N))
+    total_cost = sum(distances[i] * tariffs[assignment[i] - 2] for i in range(N))
 
     return assignment, total_cost
 
